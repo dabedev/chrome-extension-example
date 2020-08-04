@@ -1,0 +1,33 @@
+{
+    "name": "SaveUrLinks",
+    "version": "0.1",
+    "description": "Save your favorite websites",
+    "permissions": ["activeTab","declarativeContent","storage"],
+    "background": {
+      "scripts": ["index.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://www.google.com/*"],
+          "js": ["index.js"]
+        }
+      ],
+    "page_action": {
+        "default_popup": "index.html",
+        "options_page": "options.html",
+        "default_icon": {
+          "16": "assets/logo.png",
+          "32": "assets/logo.png",
+          "48": "assets/logo.png",
+          "128": "assets/logo.png"
+        }
+    },
+        "icons": {
+            "16": "assets/logo.png",
+            "32": "assets/logo.png",
+            "48": "assets/logo.png",
+            "128": "assets/logo.png"
+          },
+    "manifest_version": 2
+  }
